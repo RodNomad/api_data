@@ -2,3 +2,5 @@ database.db
 app
 envdev
 venv
+__pycache__
+
