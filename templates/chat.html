@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% include 'nav.html' %}
+
+<link href="/static/chat/css/styles.css" rel="stylesheet">
+    <div class="chat-container container">
+        <h1 class="text-center mb-4">Chat AI</h1>
+        
+        <!-- Área de mensagens -->
+        <div class="message-box mb-3" id="chatMessages">
+            <div class="system-message">Bem-vindo ao Chat AI</div>
+        </div>
+            <!-- Formulário de entrada -->
+            <form id="chatForm">
+                <div class="mb-3 input-group">
+                    <span for="systemInput" class="input-group-text">Prompt</span>
+                    <textarea class="form-control" id="systemInput" rows="2" placeholder="Prompt...  "></textarea>
+                </div>
+                
+                <div class="input-group mb-3">
+                    <span for="systemInput" class="input-group-text">User</span>
+                    <textarea class="form-control" id="userInput" rows="2" placeholder="Digite sua mensagem..."></textarea>
+                </div>
+                
+                <div class="input-group mb-3">
+                    <span for="systemInput" class="input-group-text">Answer</span>
+                    <textarea class="form-control" id="answerInput" rows="2" placeholder="Resposta..."></textarea>
+                </div>
+                
+
+                <button type="submit" class="btn btn-primary w-100">Send</button>
+            </form>
+
+    </div>
+
+
+<script src="/static/chat/js/script.js"></script>
+{% endblock %}

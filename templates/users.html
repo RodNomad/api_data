@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Users{% endblock %}
+
+{% block content %}
+{% include 'nav.html' %}
+
+<div class="container">
+    <table class="caption-top container table.bg-dark table-responsive table-bordered">
+    <caption class="text-white">List of users</caption>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Username</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% if users %}
+                {% for user in users %}
+                <tr>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.name }}</td>
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                </tr>
+                {% endfor %}
+            {% else %}
+                <tr>
+                    <td colspan="4">No registed user.</td>
+                </tr>
+            {% endif %}
+        </tbody>
+    </table>
+    <a href="/" class="btn btn-primary mt-3">Back</a>
+</div>
+{% endblock %}

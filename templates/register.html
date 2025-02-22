@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Registration Form{% endblock %}
+
+{% block content %}
+{% include 'nav.html' %}
+    <h1 class="text-center">Register</h1>
+
+    <form action="/submit" method="post" class="container">
+        
+        <div class="mb-3">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" id="name" name="name" class="form-control bg-dark text-white" required>
+        </div>
+
+        <div class="mb-3 input-group">
+            <label for="username" class="form-label input-group">Username: </label>
+            <span class="input-group-text bg-dark text-white" id="basic-addon1">@</span>
+            <input type="text" id="username" name="username" class="form-control bg-dark text-white" required>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" name="email" class="form-control bg-dark text-white" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Register</button>
+
+
+    </form>
+{% if error %}
+    <div class="alert alert-danger">{{ error }}</div>
+{% endif %}
+
+{% endblock %}

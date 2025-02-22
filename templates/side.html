@@ -1,0 +1,53 @@
+<div>
+      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+</div>
+<div class="dropdown mt-3">
+    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        Dropdown button
+    </button>
+    <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+    </ul>
+</div>
+  <div class="form-check">
+  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+  <label class="form-check-label" for="flexCheckDefault">
+    Default checkbox
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+  <label class="form-check-label" for="flexRadioDefault1">
+    Default radio
+  </label>
+</div>
+<div class="form-check form-switch">
+  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+  <label class="form-check-label" for="flexSwitchCheckDefault">Default switch checkbox input</label>
+</div>
+
+<div class="container mt-5">
+    <label for="range1" class="form-label">Example range 0-5</label>
+    <input type="range" class="form-range" min="0" max="5" step="1" id="range1" value="0">
+
+    <div class="progress mt-3" role="progressbar" aria-label="Example with label" aria-valuenow="0" aria-valuemin="0" aria-valuemax="5">
+        <div class="progress-bar" id="progressBar" style="width: 0%">0%</div>
+    </div>
+</div>
+
+<script>
+    const rangeInput = document.getElementById('range1');
+    const progressBar = document.getElementById('progressBar');
+
+    rangeInput.addEventListener('input', function() {
+        const value = this.value;
+        const max = this.max;
+        const percentage = (value / max) * 100;
+
+        progressBar.style.width = percentage + '%';
+        progressBar.textContent = value + ' (' + percentage.toFixed(0) + '%)';
+        progressBar.setAttribute('aria-valuenow', value);
+    });
+</script>

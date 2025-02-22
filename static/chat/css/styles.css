@@ -1,0 +1,41 @@
+
+.form-control{
+    background: #606870;
+}
+
+.input-group-text:hover{
+    background: #2580db !important;
+    color: #fff;
+}
+.input-group-text:hover,
+.input-group-text:active,
+.input-group-text{
+    width: 100px;
+    background: #606870;
+    color: #fff;
+}
+.message-box {
+    overflow-y: auto;
+    border: 1px solid #1a1b1b;
+    padding: 15px;
+    background-color: #1d1e1f;
+    border-radius: 15px;
+}
+.system-message {
+    background-color: #111111;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.user-message {
+    background-color: #2d4b3c;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.answer-message {
+    background-color: #606870;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Submitted Data</h1>
+    <ul>
+        {% for submission in submissions %}
+            <li>Name: {{ submission.name }}, Username: {{ submission.username }}, Email: {{ submission.email }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

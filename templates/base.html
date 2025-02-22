@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Descrição do meu site">
+    <meta name="keywords" content="listas, melhores, mais, top, conteúdo, busca, pesquisa, escolha">
+
+    <link rel="icon" href="static/img/favicon.ico" type="image/x-icon">
+
+    <title>{% block title %}Site{% endblock %}</title>
+    
+    <link href="static/bootstrap5/css/bootstrap.min.css" rel="stylesheet">
+    
+    {% block styles %}{% endblock %}
+
+  </head>
+  
+  <body class="bg-dark text-white">
+  
+    {% block content %}{% endblock %}
+    
+    <script src="static/bootstrap5/js/bootstrap.bundle.min.js"></script>  
+  
+  </body>
+
+</html>
