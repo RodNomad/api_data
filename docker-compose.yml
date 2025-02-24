@@ -1,9 +1,9 @@
 services:
   fastapi:
-    image: api-data-app
+    image: api-data-app:0.1.0
     build: .
     ports:
-      - "8002:8002"
+      - "8003:8003"
     volumes:
       - .:/app
     container_name: fastapi

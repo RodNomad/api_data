@@ -3,4 +3,5 @@ app
 envdev
 venv
 __pycache__
+.env
 

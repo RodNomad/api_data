@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Chat com Grok{% endblock %}
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .container { max-width: 600px; margin: auto; }
+        textarea { width: 100%; height: 100px; }
+        button { margin-top: 10px; padding: 5px 10px; }
+        .resposta { margin-top: 20px; padding: 10px; border: 1px solid #ccc; }
+    </style>
+</head>
+{% block content %}
+{% include 'nav.html' %}
+    <div class="container">
+        <h1>Chat com Grok</h1>
+        <form method="post" action="/enviar">
+            <textarea name="mensagem" placeholder="Digite sua mensagem aqui" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+
+        {% if resposta %}
+            <div class="resposta">
+                <h3>Sua mensagem:</h3>
+                <p>{{ mensagem }}</p>
+                <h3>Resposta do Grok:</h3>
+                <p>{{ resposta }}</p>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+</html>

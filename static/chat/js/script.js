@@ -8,13 +8,13 @@ document.getElementById('chatForm').addEventListener('submit', function(e) {
 
     // Adicionar mensagens ao chat
     if (systemInput) {
-        chatMessages.innerHTML += `<div class="system-message">System: ${systemInput}</div>`;
+        chatMessages.innerHTML += `<div class="system-message">Prompt: ${systemInput}</div>`;
     }
     if (userInput) {
         chatMessages.innerHTML += `<div class="user-message">User: ${userInput}</div>`;
     }
     if (answerInput) {
-        chatMessages.innerHTML += `<div class="answer-message">Answer: ${answerInput}</div>`;
+        chatMessages.innerHTML += `<div class="answer-message">AI: ${answerInput}</div>`;
     }
 
     // Limpar os campos

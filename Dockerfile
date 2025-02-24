@@ -9,8 +9,7 @@ RUN python3 -m venv /venv && \
     /venv/bin/pip install -r requirements.txt && \
     adduser --gecos "" --disabled-password usercontainer && \
     chown -R usercontainer:usercontainer /app && \
-    chmod -R 750 /app && \
-    chmod -R +x /app/scripts
+    chmod -R 750 /app
 
 USER usercontainer
 

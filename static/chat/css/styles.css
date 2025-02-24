@@ -1,18 +1,43 @@
 
-.form-control{
-    background: #606870;
+/* Estilizando os textareas em estado normal */
+.form-control {
+    background-color: #2c2c2c; /* Fundo escuro */
+    color: #ffffff; /* Texto branco */
+    border: 1px solid #444; /* Borda sutil */
 }
 
-.input-group-text:hover{
-    background: #2580db !important;
-    color: #fff;
+/* Sobrescrevendo o estado :focus do Bootstrap */
+.form-control:focus {
+    background-color: #2c2c2c; /* Mantém o fundo escuro ao clicar */
+    color: #fffcfc; /* Mantém o texto branco */
+    border-color: #ffffff; /* Borda um pouco mais clara para indicar foco */
+    outline: none; /* Remove o contorno padrão (opcional) */
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25); /* Ajusta o halo de foco, se desejar */
 }
-.input-group-text:hover,
-.input-group-text:active,
+
+.form-control:hover {
+    background-color: #2c2c2c; /* Mantém o fundo escuro ao clicar */
+    color: #fffcfc; /* Mantém o texto branco */
+    outline: none; /* Remove o contorno padrão (opcional) */
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25); /* Ajusta o halo de foco, se desejar */
+}
+
+.form-control::placeholder {
+    color: #ffffff; /* Cor clara para o placeholder */
+    opacity: 1; /* Garante que a cor seja visível */
+}
+.input-group-text:hover{
+    background-color: #2c2c2c; /* Mantém o fundo escuro ao clicar */
+    color: #ffffff; /* Mantém o texto branco */
+    border-color: #666; /* Borda um pouco mais clara para indicar foco */
+    outline: none; /* Remove o contorno padrão (opcional) */
+    box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25); /* Ajusta o halo de foco, se desejar */
+}
 .input-group-text{
     width: 100px;
-    background: #606870;
-    color: #fff;
+    background: #2c2c2c;
+    border-color: #666; /* Borda um pouco mais clara para indicar foco */
+    color: #ffffff;
 }
 .message-box {
     overflow-y: auto;
